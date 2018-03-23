@@ -1,13 +1,14 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-    <ul>
+    <ul class="mov-list">
       <li v-for="(item, index) in results" :key="index">
+        <img v-bind:src=item.field_movie_poster[0].url>
           <h2>{{ item.title[0].value }}</h2>
 
         <p v-html="item.body[0].value"></p>
           <router-link :to="{ name: 'movie', params: { id: item.nid[0].value } }">
-              <button>GOOOOOOOOOOOO</button>
+              <button class="read">Read more</button>
           </router-link>
       </li>
 
@@ -43,18 +44,50 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
-h1, h2 {
-  font-weight: normal;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-  li {
-    display: inline-block;
-    margin: 0 10px;
+.hello {
+  h1 {
+    text-align: center;
+  }
+  h1, h2 {
+    font-weight: normal;
+  }
+  ul {
+    list-style-type: none;
+    padding: 0;
+    li {
+      display: inline-block;
+      margin: 0 10px;
+      padding: 10px 20px;
+      img {
+        display: inline-block;
+        float: left;
+        padding-right: 20px;
+      }
+      h2 {
+        color: #882323;
+        margin-top: 0;
+      }
+      a {
+        .read {
+          color: orangered;
+          font-weight: bold;
+          background-color: #ffc774;
+          border: none;
+          padding: 5px 7px;
+          cursor: pointer;
+          &:hover {
+            background-color: #cc8300;
+          }
+        }
+      }
+    }
+  }
+  a {
+    color: #42b983;
+  }
+  ul.mov-list {
+
   }
 }
-a {
-  color: #42b983;
-}
+
 </style>
