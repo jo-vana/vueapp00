@@ -4,7 +4,7 @@
     <ul>
       <li v-for="(item, index) in results" :key="index">
           <h2>{{ item.title[0].value }}</h2>
-        <!--{{ item.body[0].value }}-->
+
         <p v-html="item.body[0].value"></p>
           <router-link :to="{ name: 'movie', params: { id: item.nid[0].value } }">
               <button>GOOOOOOOOOOOO</button>
@@ -42,17 +42,17 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style lang="scss" scoped>
 h1, h2 {
   font-weight: normal;
 }
 ul {
   list-style-type: none;
   padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
+  li {
+    display: inline-block;
+    margin: 0 10px;
+  }
 }
 a {
   color: #42b983;
