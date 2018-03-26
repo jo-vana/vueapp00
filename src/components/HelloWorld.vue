@@ -47,6 +47,8 @@ export default {
 .hello {
   h1 {
     text-align: center;
+    color: white;
+    /*font-family: 'roboto_bold',monospace;*/
   }
   h1, h2 {
     font-weight: normal;
@@ -54,12 +56,23 @@ export default {
   ul {
     list-style-type: none;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
     li {
       display: inline-block;
-      margin: 0 10px;
-      padding: 10px 20px;
+      margin: 0 auto;
+      margin-bottom: 30px;
+      padding: 20px 20px;
+      /*background-color: white;*/
+      /*border-radius: 5px;*/
+      /*box-shadow: 3px 5px #f7f7f763;*/
+      background-image: url("./../assets/paper.png");
+      background-position: center;
+      background-size: cover;
       img {
-        display: inline-block;
+        /*display: inline-block;*/
         float: left;
         padding-right: 20px;
       }
@@ -69,14 +82,15 @@ export default {
       }
       a {
         .read {
-          color: orangered;
-          font-weight: bold;
+          color: #882323;
+          font-family: 'roboto_bold',monospace;
           background-color: #ffc774;
           border: none;
-          padding: 5px 7px;
+          padding: 10px 20px;
           cursor: pointer;
+          border-radius: 5px;
           &:hover {
-            background-color: #cc8300;
+            background-color: #e6ae48;
           }
         }
       }
