@@ -4,9 +4,11 @@ import Vue from 'vue'
 import App from './App'
 import VueResource from 'vue-resource'
 import router from './router'
+import MainNavigation from '@/components/MainNavigation'
 
 Vue.use(VueResource);
 
+Vue.component('nav-main', MainNavigation);
 
 Vue.config.productionTip = false
 

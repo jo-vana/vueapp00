@@ -62,17 +62,14 @@ export default {
     width: 100%;
     li {
       display: inline-block;
+      max-width: 90%;
       margin: 0 auto;
       margin-bottom: 30px;
       padding: 20px 20px;
-      /*background-color: white;*/
-      /*border-radius: 5px;*/
-      /*box-shadow: 3px 5px #f7f7f763;*/
       background-image: url("./../assets/paper.png");
       background-position: center;
       background-size: cover;
       img {
-        /*display: inline-block;*/
         float: left;
         padding-right: 20px;
       }

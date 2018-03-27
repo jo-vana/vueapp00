@@ -18,7 +18,6 @@
                 <div class="description"><strong>About:</strong>
                     <p v-html="movie[0].body[0].value"> </p>
                 </div>
-
                 <!--<div class="actors">-->
                 <!--<p><strong>Actors:</strong></p>-->
                 <!--<ul>-->
